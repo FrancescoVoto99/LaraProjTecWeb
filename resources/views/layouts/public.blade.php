@@ -9,7 +9,7 @@
         <div id="tooplate_wrapper">
             <div id="tooplate_header">
                 <div id="site_title">
-                    <h1><a href="home12.php">SportTikets</a></h1>
+                    <h1><a href="{{ route('eventi')}}">SportTikets</a></h1>
                 </div>
 
                 <div id="tooplate_menu" class="ddsmoothmenu">
@@ -31,7 +31,7 @@
             <footer>
                 
                 <p class="footer1"><a href="FAQ.html">FAQ</a></p>
-                <p class="footer1"><a href="chi_siamo.html">Chi Siamo</a></p>
+                <p class="footer1"><a href="{{ route('who') }}">Chi Siamo</a></p>
                 <p class="footer1"><a href="lavora_con_noi.html">Lavora Con Noi</a></p>
                 Copyright © 2048 Company Name 
             </footer> 

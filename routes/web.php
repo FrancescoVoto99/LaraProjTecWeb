@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PublicController@showEventi')
+        ->name('eventi');
+
+Route::view('/where', 'where')
+        ->name('where');
+
+Route::view('/who', 'who')
+        ->name('who');

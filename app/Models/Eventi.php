@@ -9,7 +9,7 @@ class Eventi {
 
   
     // Estrae i prodotti della categoria/e $catId (tutti o solo quelli in sconto), eventualmente ordinati
-    public function getProdsByCat($catId,$order = null, $discounted = null) {
+    public function getEvents($order = null, $discounted = null) {
        // da rivedere jhjhjhh
         $prods = Event::all();
         if ($discounted != null) {
