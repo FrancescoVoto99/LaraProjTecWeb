@@ -78,51 +78,9 @@
             </div>    
 
 
-            include("include/connessione.php");
-            $sql= "select * from eventi ";
-
-            if(isset($_POST["cate"])){
-            $stringa="";
-            for($i=0;$i<sizeof($_POST["cate"]);$i++){
-                              if($i==(sizeof($_POST["cate"])-1))
-                              $stringa .= "categoria = '" . $_POST["cate"][$i] . "'" ;
-                              else
-                              $stringa .= "categoria = '" . $_POST["cate"][$i] . "' or ";}
-                              $sql .= "where " . $stringa;
-
-                              }
-                              $new_date;
-                              if(isset($_POST["data"])){
-                              $new_date = date('Y-m-d', strtotime($_POST['data']));
-                              if($new_date != "1970-01-01" ){
-                              if (isset($_POST["cate"])) $sql .= " and dataOra = '$new_date'";
-                              else $sql .= "where DATE(dataOra) = DATE('$new_date')";
-                              }}
-
-                              if(isset($_POST["regg"])){
-                              $stringa="";
-                              for($i=0;$i<sizeof($_POST["regg"]);$i++){
-                              if($i==(sizeof($_POST["regg"])-1))
-                              $stringa .= "regione = '" . $_POST["regg"][$i] . "'" ;
-                              else
-                              $stringa .= "regione = '" . $_POST["regg"][$i] . "' or ";}
-                              if(isset($_POST["cate"]) || $new_date != "1970-01-01" )
-                              $sql .= " and " . $stringa;
-                              else $sql .= "where " . $stringa;
-                              }
-
-                              $conn=mysqli_connect($HOST, $USER, $PASSWORD,$DB);
-                              $ris=mysqli_query($conn, $sql);
-                              while ( $row=mysqli_fetch_assoc($ris)) {
-                              $id=$row["id"];
-                              $no=$row["nomeEvento"];
-                              $de=$row["descrizione"];
-                              $pr=$row["prezzo"];
-                              $di=$row["bigliettiDisponibili"];
-                              //$sc=$row["sconto"];
-
-
-                              <div id="tooplate_content">
+           
+   
+          <div id="tooplate_content">
                 <h2><a name='$id' href='evento.php?id=$id'>$no</a></h2>
                 <img src="images/tooplate_image_04.png" alt="Image 04" />
                 <div class="latofoto">
@@ -134,6 +92,9 @@
                 <p>$de</p>
                 <div class="cleaner h20"></div>
                 <br class="cleaner" />
+                <!--Paginazione-->
+    @include('pagination.paginator', ['paginator' => $products])
+
                 <hr> </hr>
         </div>
         }
