@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
          DB::table('events')->insert([
-            ['nomeEvento' => 'Ancona_Pescara','categoria' => 'Calcio', 
+             ['nomeEvento' => 'Ancona_Pescara','categoria' => 'Calcio', 
              'dataOra' => 2021-07-21 15:58:00, 'luogo' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46256.48781766185!2d13.491182979101564!3d43.56424779999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132d8084e3822f2d%3A0x3ff4d14f21488e41!2sStadio%20del%20Conero!5e0!3m2!1sen!2sit!4v1619618566074!5m2!1sen!2sit',
              'descrizione' => 'jvejcejncedkscjskcdrvrgtbtgnbtgbt
               btrg
