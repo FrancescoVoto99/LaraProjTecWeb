@@ -1,4 +1,4 @@
-@extends('layout.public')
+@extends('layouts.public')
 
 @section('title','Home')
 
@@ -77,11 +77,12 @@
             <p>{{ $event->descrizione}}</p>
             <div class="cleaner h20"></div>
             <br class="cleaner" />
-            <!--Paginazione-->
-            @include('pagination.paginator', ['paginator' => $products])
+            
 
             <hr> </hr>
             @endforeach
+            <!--Paginazione-->
+            @include('pagination.paginator', ['paginator' => $events])
             @endisset()
         </div>
         

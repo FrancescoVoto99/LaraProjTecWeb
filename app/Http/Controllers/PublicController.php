@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Eventi;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Http\Request;
+use App\Models\Eventi;
+
 
 class PublicController extends Controller
 {
@@ -14,14 +14,14 @@ class PublicController extends Controller
         $this->_eventModel = new Eventi;
     }
 
-public function showEventi() {
+    public function showEventi() {
 
         //Categorie Top
         
 
         //Prodotti in sconto di tutte le categorie, ordinati per sconto decrescente
         // map estrae solo le categorie tra tutte le tuple
-        $events = $this->_eventModel->getEvent();
+        $events = $this->_eventModel->getEvents();
 
         return view('home')
                         ->with('events', $events);

@@ -13,7 +13,7 @@
                 </div>
 
                 <div id="tooplate_menu" class="ddsmoothmenu">
-                    @include('layout/_navpublic')
+                    @include('layouts/_navpublic')
                     <br style="clear: left" />
                 </div> <!-- end of menu -->
             </div>

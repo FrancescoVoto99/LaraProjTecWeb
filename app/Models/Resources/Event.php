@@ -5,7 +5,8 @@ namespace App\Models\Resources;
 use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model {
-
+    protected $table = 'events';
+    protected $primaryKey = 'id';
     public $timestamps = false;
 
     public function getPrice($withDiscount = false) {
@@ -18,9 +19,9 @@ class Event extends Model {
     }
 
     // Realazione One-To-One con Category
-    public function prodCat() {
+   // public function prodCat() {
         //attento etrarre relazione one to one slide 37
-        return $this->hasOne(Category::class, 'catId', 'catId');
-    }
+    //    return $this->hasOne(Category::class, 'catId', 'catId');
+    //}
 
 }
