@@ -20,5 +20,12 @@ class Eventi {
         }
         return $prods->paginate(2);
     }
+    
+    public function getEvent($id_event) {
+       // da rivedere jhjhjhh
+        $prod = Event::where("id", $id_event);
+        
+        return $prod;
+    }
 
 }

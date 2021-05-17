@@ -139,8 +139,14 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; }
         color: #ffd700
         
 }
-.pagination {
-    text-align: center;
+.lista_eventi {
+        font-family:'Brush Script MT';
+        font-size : 18px;
+        color: #000000
+        
+}
+#pagination {
+    text-align: center
 }
 
 .sb_menu li a:hover {

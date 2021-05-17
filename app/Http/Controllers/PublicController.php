@@ -26,4 +26,14 @@ class PublicController extends Controller
         return view('home')
                         ->with('events', $events);
     }
+    public function showEvento($id_event) {
+
+        $events = $this->_eventModel->getEvents();
+        $event = $events->where('id', $id_event)->first();
+        
+
+        return view('evento')
+                        ->with('event', $event);
+    }
+   
 }

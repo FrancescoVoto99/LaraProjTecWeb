@@ -14,9 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //Route::get('/', [PublicController::class, 'showEventi']);
-        
+
+Route::get('/evento/{id_event}', 'PublicController@showEvento')
+        ->name('evento');
+
 Route::get('/', 'PublicController@showEventi')
         ->name('eventi');
+
+
 
 Route::view('/where', 'where')
         ->name('where');
